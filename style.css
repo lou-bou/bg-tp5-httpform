@@ -1,0 +1,258 @@
+/* ===== Page ===== */
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+}
+ 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+ 
+/* ===== En-tête rouge ===== */
+.header {
+    position: relative;
+    overflow: hidden;
+    padding: 35px 20px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #e94560 0%, #c81e3c 100%);
+}
+ 
+.header::after {               /* grand clap de cinéma pâle à droite */
+    content: "🎬";
+    position: absolute;
+    right: -10px;
+    top: -25px;
+    font-size: 150px;
+    opacity: 0.1;
+    transform: rotate(-10deg);
+}
+ 
+.header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+}
+ 
+.header p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+ 
+/* ===== Formulaire ===== */
+form {
+    padding: 30px;
+}
+ 
+.tip {
+    margin: 0 0 25px;
+    padding: 12px 15px;
+    font-size: 0.9em;
+    color: #856404;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+}
+ 
+.section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-left: 4px solid #e94560;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+ 
+.section h2 {
+    margin: 0 0 20px;
+    font-size: 1.3em;
+    color: #1a1a2e;
+}
+ 
+.row {                          /* deux champs côte à côte */
+    display: flex;
+    gap: 20px;
+}
+ 
+.row .field {
+    flex: 1;
+}
+ 
+.field {
+    margin-bottom: 18px;
+}
+ 
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95em;
+    color: #444;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-family: inherit;
+    font-size: 1em;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    background: #fff;
+}
+ 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e94560;
+}
+ 
+textarea {
+    resize: vertical;
+}
+ 
+/* ===== Cases : radios et cases à cocher ===== */
+fieldset {
+    margin: 0 0 15px;
+    padding: 15px 20px;
+    border: 2px solid #e1e5eb;
+    border-radius: 10px;
+    background: #fff;
+}
+ 
+legend {
+    padding: 0 10px;
+    font-weight: 600;
+    color: #e94560;
+}
+ 
+.option {                       /* une ligne cliquable par choix */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    padding: 10px 12px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+ 
+.option:hover {
+    background: #fdf0f2;
+}
+ 
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #e94560;
+}
+ 
+/* ===== Curseur (range) ===== */
+.range-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+input[type="range"] {
+    flex: 1;
+    accent-color: #e94560;
+}
+ 
+output {
+    min-width: 50px;
+    padding: 6px 14px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: #e94560;
+    border-radius: 20px;
+}
+ 
+/* ===== Couleur ===== */
+input[type="color"] {
+    width: 80px;
+    height: 40px;
+    padding: 3px;
+    border: 2px solid #e1e5eb;
+    border-radius: 8px;
+    cursor: pointer;
+}
+ 
+/* ===== Fichiers : zone pointillée où l'on peut déposer un fichier ===== */
+input[type="file"] {
+    padding: 15px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+ 
+input[type="file"]:hover {
+    border-color: #e94560;
+}
+ 
+.note {
+    margin: 10px 0 0;
+    font-size: 0.85em;
+    color: #666;
+}
+ 
+/* ===== Bouton ===== */
+.submit {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 15px 50px;
+    font-family: inherit;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #e94560 0%, #c81e3c 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+    transition: transform 0.2s;
+}
+ 
+.submit:hover {
+    transform: translateY(-2px);
+}
+ 
+/* ===== Petits écrans ===== */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+ 
